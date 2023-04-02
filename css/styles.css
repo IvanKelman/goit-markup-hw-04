@@ -19,10 +19,16 @@ p{ margin: 0;}
 
 }
 :root {
-    --brand-color: #3f51b5;}
+    --color-slate: #8E8F99;
+    --brand-color: #3f51b5;
+    --color-ocean: #404BBF;}
 
 /* -----------heder----------- */
 .top-header{border: solid 1px #E7E9FC;
+    box-shadow: 
+    0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .navigation{
     display: flex;
@@ -340,6 +346,9 @@ background-color: #FFFFFF;
     align-items: center;
     justify-content: center;
 }
+.team-soc-link:is(:hover, focus){
+    background-color: #404BBF;
+}
 .team-icon{
     fill: #F4F4FD;
 }
@@ -368,25 +377,34 @@ background-color: #FFFFFF;
 }
 
 .customers-item {
-
+    width: 168px;
+    height: 88px;
+}
+.customers-item:is(:hover, :focus){
+border: 1px solid #4D5AE5;
+border-radius: 4px;
 }
 
 
 .customers-link {
-    width: 168px;
-    height: 88px;
+    width: 100%;
+    height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
     border: 1px solid #8E8F99;
     border-radius: 4px;
-}
 
-.castom-icon {
-    fill: #8E8F99;
+    color: var(--color-slate)
 }
-
+.custom-icon {
+    fill: var(--color-slate);
+}
+.customers-link:hover > .custom-icon{
+    fill: var(--color-ocean)
+}
 
 
 
@@ -455,7 +473,13 @@ margin-bottom: 8px;
 
 .footer-soc-item {
     width: 40px;
-    height: 40px;}
+    height: 40px;
+    display: inline-block;
+}
+.footer-soc-item :is(:hover, :focus) {
+    background: #31D0AA;
+
+}
 
 .footer-soc-link {
     width: 100%;
@@ -472,13 +496,18 @@ margin-bottom: 8px;
     fill: #FFFFFF ;
 }
 /* ------------------ sektione1(portfolio) ------------- */
+.main-sektion{
+    padding-top: 96px;
+    padding-bottom: 120px ;
+}
+
 .filters{
 
 }
 .portrtfolio-list {
     display: flex;
     padding-left: 0;
-    margin-top: 96px ;
+
     margin-bottom: 72px ;
     justify-content: center;
     gap: 24px;
@@ -515,7 +544,11 @@ height: auto;}
     .filters-btn:is(:hover, :focus) {
     color: #FFFFFF;
     background-color: #404BBF;
-    cursor: pointer
+    cursor: pointer;
+    box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .btn-contejner{
     border: bottom, left, right,#E7E9FC  1px; 
@@ -527,7 +560,7 @@ height: auto;}
 }
 .lisr-item-btn{
 
-    
+
 }
 
 .btn-list{
@@ -539,6 +572,13 @@ gap: 48px 24px;
 .img-btn{
     cursor: pointer
 }
+.img-btn :hover{
+    box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .sektion-btn-name-app{
     font-weight: 500;
     font-size: 20px;
@@ -564,5 +604,5 @@ gap: 48px 24px;
     border-left-width: 1px;
     border-left-style: solid;
     border-left-color: #E7E9FC;
-    margin-bottom: 120px;
+
 }
